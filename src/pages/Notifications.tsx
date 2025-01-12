@@ -10,7 +10,7 @@ export default function Notifications() {
         <Link to="/">
           <ArrowLeft className="w-6 h-6" />
         </Link>
-        <h1 className="text-xl font-semibold">Notification</h1>
+        <h1 className="text-xl font-bold text-red-500">Notification</h1>
       </header>
 
       <div className="divide-y divide-gray-100 bg-white">

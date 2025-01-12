@@ -1,17 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-interface AttendanceState {
-  checkInTime: string | null;
-  checkOutTime: string | null;
-  workingHours: string;
-  isCheckedIn: boolean;
-}
+import { AttendanceState } from '../types';
 
 const initialState: AttendanceState = {
-  checkInTime: null,
-  checkOutTime: null,
-  workingHours: '00:00:00',
-  isCheckedIn: false,
+    checkInTime: null,
+    checkOutTime: null,
+    workingHours: '00:00:00',
+    isCheckedIn: false,
 };
 
 const attendanceSlice = createSlice({

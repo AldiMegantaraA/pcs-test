@@ -1,4 +1,4 @@
-import { Check, X, Clock, Coins, Pill, Clock as ClockIcon, ArrowBigRight, ArrowRight } from 'lucide-react';
+import { Check, X, Coins, Pill, Clock as ClockIcon, ArrowRight } from 'lucide-react';
 import { Notification } from '../types';
 
 const iconMap = {
@@ -27,8 +27,8 @@ export default function NotificationItem({ notification }: { notification: Notif
     <div className={`flex z-50 gap-3 p-4 border-b border-gray-100 ${notification.is_read ? '' : 'bg-blue-100'}`}>
       <div className={`p-3 h-fit rounded-lg bg-red-800 relative`}>
         <Icon className={`w-6 h-6 text-white`} />
-        <span className={`inline-flex items-center right-[-4px] absolute rounded-full text-xs ${statusColorMap[notification.status]}`}>
-          <StatusIcon className="w-4 h-4 text-white" />
+        <span className={`inline-flex items-center right-[-4px] absolute p-1 rounded-full text-xs ${statusColorMap[notification.status]}`}>
+          <StatusIcon className="w-3 h-3 text-white" />
         </span>
       </div>
       <div className="flex-1">

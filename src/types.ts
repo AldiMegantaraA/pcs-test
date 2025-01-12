@@ -24,3 +24,22 @@ export interface Notification {
   is_read: boolean;
   icon: 'coins' | 'pill' | 'clock';
 }
+
+export interface CheckNotif {
+  isNotif: boolean
+  notificationData: Notification[]
+}
+
+export interface AttendanceState {
+  checkInTime: string | null;
+  checkOutTime: string | null;
+  workingHours: string;
+  isCheckedIn: boolean;
+}
+
+export interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  title: string;
+  children: React.ReactNode;
+}

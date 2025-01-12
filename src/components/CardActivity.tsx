@@ -1,34 +1,12 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { format, differenceInSeconds } from 'date-fns';
+import { useSelector } from 'react-redux';
+import { format } from 'date-fns';
 import { Clock, RotateCw } from 'lucide-react';
 import { RootState } from '../store/store';
-import { updateWorkingHours } from '../store/attendanceSlice';
 
-const AttendanceCard: React.FC = () => {
-  const dispatch = useDispatch();
-  const { checkInTime, checkOutTime, workingHours, isCheckedIn } = useSelector(
+function AttendanceCard() {
+  const { checkInTime, checkOutTime, workingHours } = useSelector(
     (state: RootState) => state.attendance
   );
-
-  useEffect(() => {
-    let interval: number;
-    
-    if (isCheckedIn) {
-      interval = window.setInterval(() => {
-        const seconds = differenceInSeconds(new Date(), new Date(checkInTime!));
-        const hours = Math.floor(seconds / 3600);
-        const minutes = Math.floor((seconds % 3600) / 60);
-        const remainingSeconds = seconds % 60;
-        
-        dispatch(updateWorkingHours(
-          `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`
-        ));
-      }, 1000);
-    }
-
-    return () => clearInterval(interval);
-  }, [isCheckedIn, checkInTime, dispatch]);
 
   return (
     <div className="p-4">

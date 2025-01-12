@@ -65,10 +65,9 @@ export const onlineEmployees: Employee[] = [
   { id: '2', name: 'Zasami', role: 'RnD', avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop', location: 'BSD', memberSince: '' },
   { id: '3', name: 'Sam', role: 'Senior', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop', location: 'BSD', memberSince: '' },
   { id: '4', name: 'Aldo', role: 'Senior', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop', location: 'WFH', memberSince: '' },
-  { id: '3', name: 'Sam', role: 'Senior', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop', location: 'BSD', memberSince: '' },
-  { id: '4', name: 'Aldo', role: 'Senior', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop', location: 'WFH', memberSince: '' },
-  { id: '3', name: 'Sam', role: 'Senior', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop', location: 'BSD', memberSince: '' },
-  { id: '4', name: 'Aldo', role: 'Senior', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop', location: 'WFH', memberSince: '' },
+  { id: '3', name: 'Roy', role: 'Senior', avatar: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=50&h=50&fit=crop', location: 'BSD', memberSince: '' },
+  { id: '4', name: 'Aldi', role: 'Senior', avatar: 'https://images.unsplash.com/photo-1735682056675-41f66a21ec31?w=50&h=50&fit=crop', location: 'WFH', memberSince: '' },
+  { id: '3', name: 'Ando', role: 'Senior', avatar: 'https://images.unsplash.com/photo-1733371001616-0341f62c56c1?w=50&h=50&fit=crop', location: 'BSD', memberSince: '' },
 ];
 
 export const notifications: Notification[] = [

@@ -35,10 +35,10 @@ export default function CardNews() {
 
     useEffect(() => {
         if (slideRef.current) {
-        const cardWidth = slideRef.current.children[0].clientWidth;
-        const gap = 16; // gap between cards
-        const offset = (window.innerWidth - cardWidth) / 2 - 40; // center the card and account for parent padding
-        slideRef.current.style.transform = `translateX(calc(${offset}px - ${currentSlide * (cardWidth + gap)}px))`;
+            const cardWidth = slideRef.current.children[0].clientWidth;
+            const gap = 16; // gap between cards
+            const offset = (window.innerWidth - cardWidth) / 2 - 40; // center the card and account for parent padding
+            slideRef.current.style.transform = `translateX(calc(${offset}px - ${currentSlide * (cardWidth + gap)}px))`;
         }
     }, [currentSlide]);
   
@@ -48,13 +48,13 @@ export default function CardNews() {
                 <div className="overflow-hidden">
                     <div 
                     ref={slideRef}
-                    className="flex gap-4 transition-transform duration-300 ease-out px-4"
+                    className="flex gap-4 transition-transform duration-300 ease-out px-4 py-4"
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                     >
                     {newsItems.map((item) => (
-                        <div key={item.id} className="w-[calc(100vw-80px)] flex-shrink-0 bg-white rounded-lg shadow-sm p-4">
+                        <div key={item.id} className="w-[calc(100vw-80px)] flex-shrink-0 bg-white rounded-lg shadow-md p-4">
                             <div className="flex gap-3">
                                 <img src={item.avatar} alt={item.author} className="w-10 h-10 rounded-full" />
                                 <div>
